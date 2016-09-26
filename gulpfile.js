@@ -13,6 +13,7 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var pkg = require('./package.json');
+var formatCssSelector = require('postcss-selector-style');
 
 var option = {base: 'src'};
 var dist = __dirname + '/dist';
@@ -31,7 +32,7 @@ gulp.task('build:style', function (){
             console.error(e.message);
             this.emit('end');
         }))
-        .pipe(postcss([autoprefixer(['iOS >= 7', 'Android >= 4.1'])]))
+        .pipe(postcss([autoprefixer(['iOS >= 7', 'Android >= 4.1']), formatCssSelector]))
         .pipe(header(banner, { pkg : pkg } ))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dist))
