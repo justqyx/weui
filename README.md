@@ -5,6 +5,22 @@ WeUI 为微信 Web 服务量身设计
 [![npm version](https://img.shields.io/npm/v/weui.svg)](https://www.npmjs.org/package/weui)
 [![Gitter](https://badges.gitter.im/weui/weui.svg)](https://gitter.im/weui/weui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+本项目对输出的 css selector 命名进行了重新格式化，对 `_`、`__` 等不符合前端社区的命名方式进行了替换，例如：
+
+```css
+.weui-cell__bd {
+}
+.weui-cell_primary {
+}
+
+/* 分别被替换成 */
+
+.weui-cell-bd {
+}
+.weui-cell-primary {
+}
+```
+
 ## 概述
 
 WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信 Web 开发量身设计，可以令用户的使用感知更加统一。包含`button`、`cell`、`dialog`、 `progress`、 `toast`、`article`、`actionsheet`、`icon`等各式元素。
