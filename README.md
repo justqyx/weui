@@ -5,7 +5,7 @@ WeUI 为微信 Web 服务量身设计
 [![npm version](https://img.shields.io/npm/v/weui.svg)](https://www.npmjs.org/package/weui)
 [![Gitter](https://badges.gitter.im/weui/weui.svg)](https://gitter.im/weui/weui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-本项目对输出的 css selector 命名进行了重新格式化，对 `_`、`__` 等不符合前端社区的命名方式进行了替换，例如：
+本项目对输出的 css selector 命名进行了重新格式化，对 `_`、`__` 用 `-` 进行了替换，例如：
 
 ```css
 .weui-cell__bd {
