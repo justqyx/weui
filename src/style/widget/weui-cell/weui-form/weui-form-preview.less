@@ -39,6 +39,9 @@
         .setTopLine(@weuiDialogLineColor);
     }
 }
+.weui-form-preview__item{
+    overflow: hidden;
+}
 .weui-form-preview__label{
     float: left;
     margin-right: 1em;
@@ -60,6 +63,12 @@
     color: @weuiDialogLinkColor;
     text-align: center;
     .setTapColor();
+    button&{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        font-size: inherit;
+    }
     &:active {
         background-color: @weuiDialogLinkActiveBc;
     }
